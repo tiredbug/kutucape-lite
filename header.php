@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" id="bootstrap-css"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="font-awesome-css"  href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" type="text/css" media="all" />
   <link rel="stylesheet" id="style-css"  href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="all" />
   
   <?php wp_head(); ?>
