@@ -4,8 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-	      <span class="pull-left">&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>.</span>
-	      <span class="pull-right">Proudly powered by <a href="http://wordpress.org">WordPress</a> and <a href="http://getbootstrap.com">Twitter Bootstrap 3</a>.</span>
+        <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>. Proudly powered by <a href="http://wordpress.org">WordPress</a> and <a href="http://getbootstrap.com">Twitter Bootstrap 3</a>.</p>
       </div>
     </div>
   </div>
