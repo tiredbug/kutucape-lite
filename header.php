@@ -27,6 +27,9 @@
   
   <?php wp_head(); ?>
   
+  <!-- Costumize CSS -->
+  <link rel="stylesheet" id="style-css"  href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="all" />
+  
 </head>
 
 <body <?php body_class(); ?>>
