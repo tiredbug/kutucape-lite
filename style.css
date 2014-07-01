@@ -15,6 +15,11 @@ License URI: http://opensource.org/licenses/MIT
 .jumbotron {
   padding: 80px 0 80px 0;
 }
+.jumbotron .btn-download {
+  font-size: 32px;
+  margin-top: 30px;
+  padding: 15px 30px;
+}
 
 /*
 Max content widths
