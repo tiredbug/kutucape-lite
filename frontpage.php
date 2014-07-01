@@ -11,7 +11,7 @@ Template Name: Frontpage Template
     <h1>Hello, world!</h1>			
     <p>Simple <a href="http://getbootstrap.com">Bootstrap 3</a> Starter Theme For <a href="http://wordpress.org">WordPress</a>. </p>
     <p class="light-text">This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-default btn-lg btn-outline" role="button"><i class="fa fa-download"></i>&nbsp; Download</a></p>
+    <p><a class="btn btn-default btn-lg btn-download" role="button"><i class="fa fa-download"></i>&nbsp; Download</a></p>
   </div>
 </div>
 
