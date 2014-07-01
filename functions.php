@@ -1,13 +1,13 @@
 <?php
 
+// Add Post Thumbnails Support
 add_theme_support('post-thumbnails');
 
-register_nav_menu('top-bar', __('Primary Menu'));
+// Register Menu Support
+register_nav_menu('primary', __('Primary Menu'));
 
-wp_enqueue_script('jquery');
-
+// Register widgets support for theme
 function theme_widgets_init() {
-
   register_sidebar( array(
     'name' => __( 'Sidebar', 'theme' ),
     'id' => 'sidebar-widget-area',
@@ -17,13 +17,11 @@ function theme_widgets_init() {
     'before_title' => '<h3>',
     'after_title' => '</h3>',
   ) );
-
 }
-
 add_action( 'widgets_init', 'theme_widgets_init' );
 
+// Simple WordPress Walker Nav Menu extends for Bootstrap 
 class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
-
   function display_element($element, &$children_elements, $max_depth, $depth=0, $args, &$output) {
     $id_field = $this->db_fields['id'];
     if(!empty($children_elements[$element->$id_field])) {
@@ -32,14 +30,12 @@ class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
       Walker_Nav_Menu::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
   }
-
   function start_lvl( &$output ) {
     $classes = array( 'sub-menu dropdown-menu' );
     $class_names = implode( ' ', $classes );
     // build html
     $output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
-  }
-    
+  }    
 }
 
 ?>
