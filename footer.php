@@ -13,15 +13,20 @@
 
 <?php wp_footer(); ?>
 
-<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<script type="text/javascript">
-$j=jQuery.noConflict();
-$j(document).ready(function(){
-  $j(".comment-reply-link").addClass("btn btn-default");
-  $j('.dropdown > a').attr("data-toggle", "dropdown");
-});
-</script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all Bootstrap compiled plugins (below), or include individual files as needed -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <!-- addClass to reply button and data-toogle dropdown for Walker Nav Menu -->
+  <script type="text/javascript">
+  $j=jQuery.noConflict();
+  $j(document).ready(function(){
+    $j(".comment-reply-link").addClass("btn btn-default");
+    $j('.dropdown > a').attr("data-toggle", "dropdown");
+  });
+  </script>
 
 </body>
 </html>
