@@ -64,4 +64,57 @@ class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
   }    
 }
 
+// Bootswatch Costumizer
+function bootswatch_customizer_css(){
+	$css = get_theme_mod( 'bootswatch_style' );
+	if ( '' !== $css ):
+		echo '<link rel="stylesheet" href="'.$css.'">';
+	endif;
+}
+add_action( 'wp_head', 'bootswatch_customizer_css' );
+
+function bootswatch_register_theme_customizer( $wp_customize ){
+	$styles = array(
+		'Amelia' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/amelia/bootstrap.min.css',
+		'Cerulean' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cerulean/bootstrap.min.css',
+		'Cosmo' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css',
+		'Cyborg' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cyborg/bootstrap.min.css',
+		'Default' => '',
+		'Flaty' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css',
+		'Journal' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/journal/bootstrap.min.css',
+		'Readable' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css',
+		'Simplex' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/simplex/bootstrap.min.css',
+		'Slate' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/slate/bootstrap.min.css',
+		'Spacelab' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/spacelab/bootstrap.min.css',
+		'United' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css',
+		'Yeti' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css',
+	);
+	$labels = array_flip( $styles );
+	$wp_customize->add_section(
+		'bootswatch_themes',
+		array(
+			'title'     => 'BootSwatch Themes',
+			'priority'  => 200
+		)
+	);
+	$wp_customize->add_setting(
+		'bootswatch_style',
+			array(
+				'default'     => '',
+				#'transport'   => 'postMessage'
+			)
+	);
+	$wp_customize->add_control(
+		'bootswatch_style',
+		array(
+			'section'		=> 'bootswatch_themes',
+			'label'			=> __( 'Bootswatch Theme', 'theme' ),
+			'type'			=> 'select',
+			'choices'		=> $labels,
+			'settings'	=> 'bootswatch_style'
+		)
+	);
+}
+add_action( 'customize_register', 'bootswatch_register_theme_customizer' );
+
 ?>
