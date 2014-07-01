@@ -12,6 +12,9 @@ License URI: http://opensource.org/licenses/MIT
 .navbar {
   margin-bottom: 0px;
 }
+.jumbotron {
+  padding: 80px 0 80px 0;
+}
 
 /*
 Max content widths
@@ -44,12 +47,6 @@ Header
 }
 .site-title a:hover {
   text-decoration: none;
-}
-.site-description {
-  padding: 0 0 10px 0;
-  font-size: 18px;
-  font-weight: lighter;
-  letter-spacing: 1px;
 }
 
 /*
@@ -129,15 +126,18 @@ ol.commentlist li ul {
 }
 
 
-/* Featurettes
+/* Powered
 ------------------------- */
 
 .powered-divider {
   margin: 40px 0 80px 0; 
 }
 
+/* Featurettes
+------------------------- */
+
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 80px 0;
 }
 
 /* Thin out the marketing headings */
@@ -159,6 +159,6 @@ ol.commentlist li ul {
 
 @media (min-width: 992px) {
   .featurette-heading {
-    margin-top: 40px;
+    margin-top: 120px;
   }
 }
