@@ -5,12 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php bloginfo('name'); ?> <?php wp_title('•', true, ''); ?></title>
-
-  <!-- Shortcut Icon -->
-  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
-
   <?php wp_head(); ?>
-  
 </head>
 
 <body <?php body_class(); ?>>
