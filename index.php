@@ -15,8 +15,8 @@
                 <span class="text-muted" class="author">by <?php the_author() ?> under <?php _e(''); ?> <?php the_category(', ') ?> with <?php comments_popup_link('None', '1', '%'); ?> comments.</span>
               </em>
             </h4>
+            <hr/>
           </header>
-          <hr/>
           <?php the_post_thumbnail(); ?>
           <?php the_content( __( '&hellip; Continue reading <i class="glyphicon glyphicon-arrow-right"></i>', 'theme' ) ); ?>
           <hr/>
