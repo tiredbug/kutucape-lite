@@ -82,13 +82,13 @@ function theme_enqueues()
   wp_register_script('modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js');
   wp_enqueue_script('modernizr');
 
-  wp_register_script('html5shiv', '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js';
+  wp_register_script('html5shiv', '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js');
   wp_enqueue_script('html5shiv');
 
-  wp_register_script('respond', '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js';
+  wp_register_script('respond', '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js');
   wp_enqueue_script('respond');
 
-  wp_register_script('bootstrapjs', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js';
+  wp_register_script('bootstrapjs', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js');
   wp_enqueue_script('bootstrapjs');
 
   if (is_singular() && comments_open() && get_option('thread_comments')) {
