@@ -59,7 +59,7 @@ add_action( 'widgets_init', 'theme_widgets_init' );
 
 // Add favicon 
 function blog_favicon() { ?>
-  <link rel="shortcut icon" href="<?php echo bloginfo('stylesheet_directory') ?>/favicon.ico" >
+<link rel="shortcut icon" href="<?php echo bloginfo('stylesheet_directory') ?>/favicon.ico" >
 <?php }
 add_action('wp_head', 'blog_favicon');
 
