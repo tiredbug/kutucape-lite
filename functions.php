@@ -68,6 +68,9 @@ function theme_enqueues()
 {
   wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
   wp_enqueue_style('bootstrap');
+
+  wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+  wp_enqueue_style('font-awesome');
     
   wp_register_script('jquery');
   wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
