@@ -2,28 +2,28 @@
 
 // Add page on theme activation and set it as homepage automatically
 if (isset($_GET['activated']) && is_admin()){
-    add_action('init', 'theme_frontpage_setup');
+  add_action('init', 'theme_frontpage_setup');
 }
 
 function theme_frontpage_setup(){
- if(get_option('page_on_front')=='0' && get_option('show_on_front')=='posts'){
-        // Create frontpage
-        $frontpage = array(
-            'post_type'    => 'page',
-            'post_title'    => 'Frontpage',
-            'post_content'  => '',
-            'post_status'   => 'publish',
-            'post_author'   => 1
-        ); 
-        // Insert the post into the database
-        $frontpage_id =  wp_insert_post( $frontpage );
-        // Set the page template 
-        update_post_meta($frontpage_id, '_wp_page_template', 'frontpage.php');
-	// Set static front page
-	$staticpage = get_page_by_title( 'Frontpage' );
-	update_option( 'page_on_front', $staticpage->ID );
-	update_option( 'show_on_front', 'page' );
-    }
+  if(get_option('page_on_front')=='0' && get_option('show_on_front')=='posts'){
+    // Create frontpage
+    $frontpage = array(
+      'post_type'    => 'page',
+      'post_title'    => 'Frontpage',
+      'post_content'  => '',
+      'post_status'   => 'publish',
+      'post_author'   => 1
+    ); 
+    // Insert the post into the database
+    $frontpage_id =  wp_insert_post( $frontpage );
+    // Set the page template 
+    update_post_meta($frontpage_id, '_wp_page_template', 'frontpage.php');
+    // Set static front page
+    $staticpage = get_page_by_title( 'Frontpage' );
+    update_option( 'page_on_front', $staticpage->ID );
+    update_option( 'show_on_front', 'page' );
+  }
 }
 
 // Add Post Thumbnails Support
