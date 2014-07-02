@@ -72,6 +72,9 @@ function theme_enqueues()
   wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
   wp_enqueue_style('font-awesome');
     
+  wp_register_style('style', get_template_directory_uri() . '/style.css');
+  wp_enqueue_style('style');
+
   wp_register_script('jquery');
   wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
   wp_enqueue_script('jquery');
