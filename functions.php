@@ -88,9 +88,6 @@ function bootswatch_register_theme_customizer( $wp_customize ){
     'Spacelab' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/spacelab/bootstrap.min.css',
     'United' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css',
     'Yeti' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css',
-    'Cupid' => '//www.scalaworkshop.com/sphinx-bootstrap-theme/sphinx_bootstrap_theme/bootstrap/static/bootswatch-3.1.0/cupid/bootstrap.min.css',
-    'Lumen' => '//www.scalaworkshop.com/sphinx-bootstrap-theme/sphinx_bootstrap_theme/bootstrap/static/bootswatch-3.1.0/lumen/bootstrap.min.css',
-    'Samrock' => '//www.tiredbug.com/samrock.css',
   );
   $labels = array_flip( $styles );
   $wp_customize->add_section(
