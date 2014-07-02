@@ -72,6 +72,9 @@ function theme_enqueues()
   wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
   wp_enqueue_style('font-awesome');
     
+  wp_register_style('bootswatch_style', get_theme_mod('bootswatch_style'));
+  wp_enqueue_style('bootswatch_style');
+
   wp_register_style('style', get_template_directory_uri() . '/style.css');
   wp_enqueue_style('style');
 
@@ -116,14 +119,6 @@ class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
 }
 
 // Bootswatch Costumizer
-function bootswatch_customizer_css(){
-  $css = get_theme_mod( 'bootswatch_style' );
-  if ( '' !== $css ):
-    echo '<link rel="stylesheet" href="'.$css.'">';
-  endif;
-}
-add_action( 'wp_head', 'bootswatch_customizer_css' );
-
 function bootswatch_register_theme_customizer( $wp_customize ){
   $styles = array(
     'Amelia' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/amelia/bootstrap.min.css',
