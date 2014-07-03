@@ -9,12 +9,12 @@
         <article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
           <header>
             <h2><?php the_title()?></h2>
-            <h4>
+            <h5>
               <em>
                 <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php the_time('jS F Y') ?></time>
                 <span class="text-muted" class="author">by <?php the_author() ?> under <?php _e(''); ?> <?php the_category(', ') ?> with <?php comments_popup_link('None', '1', '%'); ?> comments.</span>
               </em>
-            </h4>
+            </h5>
             <hr/>
           </header>
           <?php the_post_thumbnail(); ?>
