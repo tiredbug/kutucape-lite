@@ -38,26 +38,7 @@ remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
 // Remove the annoying:
 // <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-function remove_recent_comments_style() {
-  add_filter( 'show_recent_comments_widget_style', '__return_false' );
-}
-add_action( 'widgets_init', 'remove_recent_comments_style' );
-
-// Remove the id="" on nav menu items
-// Return 'menu-slug' for nav menu classes
-function theme_nav_menu_css_class($classes, $item) {
-  $slug = sanitize_title($item->title);
-  $classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', 'active', $classes);
-  $classes = preg_replace('/^((menu|page)[-_\w+]+)+/', '', $classes);
-
-  $classes[] = 'menu-' . $slug;
-
-  $classes = array_unique($classes);
-
-  return array_filter($classes, 'is_element_empty');
-}
-add_filter('nav_menu_css_class', 'theme_nav_menu_css_class', 10, 2);
-add_filter('nav_menu_item_id', '__return_null');
+add_filter( 'show_recent_comments_widget_style', '__return_false' );
 
 // Add Post Thumbnails Support
 add_theme_support('post-thumbnails');
@@ -139,6 +120,13 @@ class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
     $output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
   }    
 }
+
+// Reduce nav classes, leaving only 'dropdown'
+function nav_class_filter( $var ) {
+  return is_array($var) ? array_intersect($var, array('dropdown')) : '';
+}
+add_filter('nav_menu_css_class', 'nav_class_filter', 100, 1);
+add_filter('nav_menu_item_id', '__return_null');
 
 // Bootswatch Costumizer
 function bootswatch_register_theme_customizer( $wp_customize ){
