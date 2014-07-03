@@ -9,18 +9,18 @@
         <article role="article" id="post_<?php the_ID()?>">
           <header>
             <h2><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h2>
-            <h4>
+            <h5>
               <em>
                 <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php the_time('jS F Y') ?></time>
                 <span class="text-muted" class="author">by <?php the_author() ?> under <?php _e(''); ?> <?php the_category(', ') ?> with <?php comments_popup_link('None', '1', '%'); ?> comments.</span>
               </em>
-            </h4>
+            </h5>
             <hr/>
           </header>
           <?php the_post_thumbnail(); ?>
           <?php the_content( __( '&hellip; Continue reading <i class="glyphicon glyphicon-arrow-right"></i>', 'theme' ) ); ?>
-          <hr/>
         </article>
+        <hr/>
         <?php endwhile; ?>
         <ul class="pagination">
           <li class="older"><?php next_posts_link('&laquo; Older') ?></li>
