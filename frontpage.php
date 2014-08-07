@@ -6,20 +6,20 @@ Template Name: Frontpage Template
 
 <?php get_header(); ?>
     
-<div class="jumbotron text-center">
+<div class="jumbotron masthead">
   <div class="container">
     <h1>Kutu Kutu</h1>			
     <p>Simple <a href="http://getbootstrap.com">Bootstrap 3</a> Starter Theme For <a href="http://wordpress.org">WordPress</a>. </p>
     <p class="light-text">This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a href="https://github.com/tiredbug/kutu-kutu/archive/master.zip" class="btn btn-default btn-lg btn-download" role="button"><i class="fa fa-download"></i>&nbsp;&nbsp; Download</a></p>
+    <p><a href="https://github.com/tiredbug/kutu-kutu/archive/master.zip" class="btn btn-outline-inverse btn-lg" role="button"><i class="fa fa-download"></i>&nbsp;&nbsp; Download</a></p>
   </div>
 </div>
 
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 text-center">
-      <img src="http://www.tiredbug.com/wp-content/uploads/2014/06/powered-by.png" alt="powered-by" class="img-responsive center-block" />
+    <div class="col-sm-12 text-center powered-fa">
+      <i class="fa fa-wordpress"></i> WordPress &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-flag"></i> Font Awesome &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-github"></i> GitHub
     </div>
   </div>
 </div>
@@ -61,15 +61,5 @@ Template Name: Frontpage Template
 </div>
 <!-- /END THE FEATURETTES -->
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <blockquote>
-      <p><i class="fa fa-twitter fa-3x"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="text-right">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-      </blockquote>
-    </div>
-  </div>
-</div>
     
 <?php get_footer(); ?>
