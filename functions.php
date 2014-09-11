@@ -58,12 +58,12 @@ add_action('wp_head', 'blog_favicon');
 // Add Enqueues
 function theme_enqueues()
 {
-  wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+  wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
   wp_enqueue_style('bootstrap');
 
-  wp_register_style('jasny-bootstrap', get_template_directory_uri() . '/css/jasny-bootstrap.min.css');
+  wp_register_style('jasny-bootstrap', '//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css');
   wp_enqueue_style('jasny-bootstrap');
-
+  
   wp_register_style('style', get_template_directory_uri() . '/style.css');
   wp_enqueue_style('style');
 
