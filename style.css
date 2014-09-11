@@ -59,7 +59,7 @@ body {
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
-    margin-left: 15px;
+    margin-right: 15px;
     width: 50%; /* 6 columns */
   }
 }
