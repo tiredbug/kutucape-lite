@@ -39,6 +39,9 @@ font-size: 24px;
   .navbar {
     padding-right: 15px;
   }
+  .navbar-toggle {
+    float: left;
+  }
 }
 
 /*
