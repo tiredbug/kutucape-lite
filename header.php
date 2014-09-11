@@ -28,7 +28,8 @@
       </button>
       <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
     </div><!-- /.navbar-header -->
-    <div class="navbar-offcanvas offcanvas navmenu-fixed-left">Project<br/>    
+    <div class="navbar-offcanvas offcanvas navmenu-fixed-left">
+      <a class="navmenu-brand" href="#">Project name</a>
       <?php				
         $args = array(
           'theme_location' => 'primary',
