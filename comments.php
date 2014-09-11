@@ -122,7 +122,7 @@ if (have_comments()) : ?>
       <label for="comment"><?php _e('Your comment', 'theme'); ?></label>
       <textarea name="comment" class="form-control" id="comment" placeholder="Your comment" rows="8" aria-required="true"></textarea>
     </div>
-    <p><input name="submit" class="btn btn-default btn-lg" type="submit" id="submit" value="<?php _e('Submit comment', 'theme'); ?>"></p>
+    <p><input name="submit" class="btn btn-primary" type="submit" id="submit" value="<?php _e('Submit comment', 'theme'); ?>"></p>
     <?php comment_id_fields(); ?>
     <?php do_action('comment_form', $post->ID); ?>
   </form>

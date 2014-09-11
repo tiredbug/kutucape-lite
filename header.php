@@ -17,7 +17,11 @@
 <![endif]-->    
 
 <!-- Navbar -->
+<?php if ( get_theme_mod( 'navbar_toggle' ) == 1 ) { ?>
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+<?php } else { ?>
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
+<?php } ?>
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">

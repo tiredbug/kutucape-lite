@@ -1,5 +1,20 @@
 <?php
 
+function soil_nice_search_redirect() {
+  global $wp_rewrite;
+  if (!isset($wp_rewrite) || !is_object($wp_rewrite) || !$wp_rewrite->using_permalinks()) {
+    return;
+  }
+
+  $search_base = $wp_rewrite->search_base;
+  if (is_search() && !is_admin() && strpos($_SERVER['REQUEST_URI'], "/{$search_base}/") === false) {
+    wp_redirect(home_url("/{$search_base}/" . urlencode(get_query_var('s'))));
+    exit();
+  }
+}
+add_action('template_redirect', 'soil_nice_search_redirect');
+
+
 // Add page on theme activation and set it as homepage automatically
 if (isset($_GET['activated']) && is_admin()){
   add_action('init', 'theme_frontpage_setup');
@@ -27,14 +42,17 @@ function theme_frontpage_setup(){
 }
 
 // Clean up wp_head()
-remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'index_rel_link');
-remove_action('wp_head', 'feed_links', 2);
-remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'start_post_rel_link', 10, 0);
+remove_action('wp_head', 'parent_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+
 
 // Remove the annoying:
 // <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
@@ -59,6 +77,18 @@ function theme_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'theme_widgets_init' );
+
+// Replace searh form
+function theme_search_form( $form ) {
+    $form = '<form class="form-inline" role="search" method="get" id="searchform" action="' . home_url('/') . '" >
+    <div class="form-group">
+		    <input class="form-control" type="text" value="' . get_search_query() . '" name="s" id="s" />
+    </div>
+		<button type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" class="btn btn-default"><i class="glyphicon glyphicon-search"></i> '. esc_attr__('Search') .'</button>
+    </form>';
+    return $form;
+}
+add_filter( 'get_search_form', 'theme_search_form' );
 
 // Add favicon 
 function blog_favicon() { ?>
@@ -97,6 +127,9 @@ function theme_enqueues()
   wp_register_script('bootstrapjs', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js');
   wp_enqueue_script('bootstrapjs');
 
+  wp_deregister_script( 'comment-reply' );
+  wp_register_script('comment-reply', get_template_directory_uri() . '/theme.js');
+
   if (is_singular() && comments_open() && get_option('thread_comments')) {
   wp_enqueue_script('comment-reply');
   }
@@ -113,7 +146,7 @@ class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
       Walker_Nav_Menu::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
   }
-  function start_lvl( &$output ) {
+  function start_lvl( &$output, $depth = 0, $args = array() ) {
     $classes = array( 'sub-menu dropdown-menu' );
     $class_names = implode( ' ', $classes );
     // build html
@@ -143,7 +176,7 @@ function bootswatch_register_theme_customizer( $wp_customize ){
     'Slate' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/slate/bootstrap.min.css',
     'Spacelab' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/spacelab/bootstrap.min.css',
     'United' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css',
-    'Yeti' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css',
+    'Yeti' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css'
   );
   $labels = array_flip( $styles );
   $wp_customize->add_section(
@@ -172,5 +205,28 @@ function bootswatch_register_theme_customizer( $wp_customize ){
   );
 }
 add_action( 'customize_register', 'bootswatch_register_theme_customizer' );
+
+function navbar_customizer( $wp_customize ) {
+
+	// add "Navbar Options" section
+	$wp_customize->add_section( 'navbar_options_section' , array(
+		'title'      => __( 'Navbar Options', 'theme' ),
+		'priority'   => 190,
+	) );
+	
+	// add setting for toggle checkbox
+	$wp_customize->add_setting( 'navbar_toggle', array( 
+		'default' => 1 
+	) );
+	
+	// add control for toggle checkbox
+	$wp_customize->add_control( 'navbar_toggle', array(
+		'label'     => __( 'Inverse Navbar', 'theme' ),
+		'section'   => 'navbar_options_section',
+		'priority'  => 10,
+		'type'      => 'checkbox'
+	) );
+}
+add_action( 'customize_register', 'navbar_customizer' );
 
 ?>

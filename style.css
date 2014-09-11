@@ -15,39 +15,24 @@ License URI: http://opensource.org/licenses/MIT
 .masthead {
   position: relative;
   padding: 60px 30px;
-  color: #fff;
   text-align: center;
-  text-shadow: 0 1px 0 rgba(0,0,0,.1);
-  background-color: #3276b1;
-  background-image: -webkit-linear-gradient(top, #285e8e 0%, #3276b1 100%);
-  background-image: linear-gradient(to bottom, #285e8e 0%, #3276b1 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#285e8e', endColorstr='#3276b1', GradientType=0);
 }
-.masthead a {
-  color: #fff;
+.masthead p {
+  padding: 10px 0;
 }
-.masthead small {
-  font-size: 80%;
-  color: #ccc;
-}
-.btn-outline-inverse {
-  margin-top: 20px;
-  color: #fff;
-  background-color: transparent;
-  border-color: #cdbfe3
-}
-.btn-outline-inverse:hover,
-.btn-outline-inverse:focus,
-.btn-outline-inverse:active {
-  color: #3276b1;
-  text-shadow: none;
-  background-color: #fff;
-  border-color: #fff
-}
-.powered-fa {
-  font-size: 36px;
+.marketing {
+  padding: 60px 0;
   
+}
+.contact-us {
+  border-radius: 0px;
+}
+.contact-us { 
+  padding-top: 20px;
+  padding-bottom: 20px; 
+}
+.contact-us .h1 small {
+font-size: 24px;
 }
 
 /*
@@ -159,40 +144,15 @@ ol.commentlist li ul {
   margin: 0;
 }
 
-
-/* Powered
-------------------------- */
-
-.powered-divider {
-  margin: 40px 0 80px 0; 
-}
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 80px 0;
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 768px) {
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
-}
+			.social-fb:hover {
+				color: #3B5998;
+			}
+			.social-tw:hover {
+				color: #4099FF;
+			}
+			.social-gp:hover {
+				color: #d34836;
+			}
+			.social-em:hover {
+				color: #f39c12;
+			}
