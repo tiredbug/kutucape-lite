@@ -28,7 +28,7 @@
       </button>
       <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
     </div><!-- /.navbar-header -->
-    <div class="navbar-offcanvas offcanvas navmenu-fixed-left">    
+    <div class="navbar-offcanvas offcanvas navmenu-fixed-left">Project<br/>    
       <?php				
         $args = array(
           'theme_location' => 'primary',
