@@ -11,5 +11,14 @@
 
 <?php wp_footer(); ?>
 
+ <!-- addClass to reply button and data-toogle dropdown for Walker Nav Menu -->
+<script type="text/javascript">
+  $j=jQuery.noConflict();
+  $j(document).ready(function(){
+    $j(".comment-reply-link").addClass("btn btn-default");
+    $j('.dropdown > a').attr("data-toggle", "dropdown");
+  });
+</script>
+
 </body>
 </html>
