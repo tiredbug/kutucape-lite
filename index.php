@@ -40,5 +40,6 @@
     </div><!-- /.col-sm-4 .sidebar -->
     
   </div><!-- .row -->
+</div><!-- .container -->
 
 <?php get_footer(); ?>
