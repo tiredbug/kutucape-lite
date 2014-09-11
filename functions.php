@@ -61,7 +61,7 @@ function theme_enqueues()
   wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
   wp_enqueue_style('bootstrap');
 
-  wp_register_style('jasny-bootstrap', get_template_directory_uri() . '/jasny-bootstrap.min.css');
+  wp_register_style('jasny-bootstrap', '//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css');
   wp_enqueue_style('jasny-bootstrap');
 
   wp_register_style('style', get_template_directory_uri() . '/style.css');
@@ -83,7 +83,7 @@ function theme_enqueues()
   wp_register_script('bootstrapjs', '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js', '', '', true );
   wp_enqueue_script('bootstrapjs');
 
-  wp_register_script('jasny-bootstrapjs', '//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js', '', '', true );
+  wp_register_script('jasny-bootstrapjs', get_template_directory_uri() . '/jasny-bootstrap.min.js', '', '', true );
   wp_enqueue_script('jasny-bootstrapjs');
 
   if (is_singular() && comments_open() && get_option('thread_comments')) {
