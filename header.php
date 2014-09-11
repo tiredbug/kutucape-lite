@@ -17,7 +17,7 @@
 <![endif]-->    
 
 <!-- Navbar -->
-<nav class="navbar navbar-default navbar-static-top navmenu-fixed-left" role="navigation">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navbar-offcanvas" data-canvas="body">
@@ -28,7 +28,7 @@
       </button>
       <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
     </div><!-- /.navbar-header -->
-    <div class="navbar-offcanvas offcanvas">    
+    <div class="navbar-offcanvas offcanvas navmenu-fixed-left">    
       <?php				
         $args = array(
           'theme_location' => 'primary',
