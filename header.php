@@ -17,11 +17,7 @@
 <![endif]-->    
 
 <!-- Navbar -->
-<?php if ( get_theme_mod( 'navbar_toggle' ) == 1 ) { ?>
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-<?php } else { ?>
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
-<?php } ?>
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -30,7 +26,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><i class="fa fa-bug"></i>&nbsp; <?php bloginfo('name'); ?></a>
+      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
     </div><!-- /.navbar-header -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">    
       <?php				
