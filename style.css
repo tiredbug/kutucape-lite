@@ -37,7 +37,8 @@ font-size: 24px;
 
 @media (min-width: 992px) {
   .navbar {
-    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
   }
 }
 
