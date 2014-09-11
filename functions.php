@@ -150,6 +150,7 @@ class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
     $classes = array( 'sub-menu dropdown-menu' );
     $class_names = implode( ' ', $classes );
     // build html
+    $indent = str_repeat( "\t", $depth );
     $output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
   }    
 }
