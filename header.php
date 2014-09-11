@@ -20,7 +20,7 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navbar-offcanvas" data-canvas="body">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navbar-offcanvas .navmenu-fixed-left" data-canvas="body">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
