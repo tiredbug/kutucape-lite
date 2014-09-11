@@ -34,13 +34,12 @@ License URI: http://opensource.org/licenses/MIT
 .contact-us .h1 small {
 font-size: 24px;
 }
-
+.navbar-toggle {
+  float: left;
+}
 @media (min-width: 992px) {
   .navbar {
     padding-right: 15px;
-  }
-  .navbar-toggle {
-    float: left;
   }
 }
 
