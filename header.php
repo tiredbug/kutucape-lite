@@ -29,7 +29,7 @@
       <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
     </div><!-- /.navbar-header -->
     <div class="navbar-offcanvas offcanvas navmenu-fixed-left">
-      <a class="navmenu-brand" href="#">Project name</a>
+      <a class="navmenu-brand" href="#">Primary Menu</a>
       <?php				
         $args = array(
           'theme_location' => 'primary',
