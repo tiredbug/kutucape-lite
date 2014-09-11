@@ -35,6 +35,12 @@ License URI: http://opensource.org/licenses/MIT
 font-size: 24px;
 }
 
+@media (min-width: 992px) {
+  .navbar {
+    padding-right: 15px;
+  }
+}
+
 /*
 Max content widths
 */
