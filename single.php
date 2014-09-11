@@ -5,7 +5,7 @@
   
     <div class="col-xs-12 col-sm-8">
       <p class="pull-right visible-xs">
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle Sidebar</button>
       </p>      
       <div id="content" role="main">
         <?php if(have_posts()): while(have_posts()): the_post();?>
