@@ -20,7 +20,7 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navbar-offcanvas">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -28,7 +28,7 @@
       </button>
       <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
     </div><!-- /.navbar-header -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">    
+    <div class="navbar-offcanvas offcanvas">    
       <?php				
         $args = array(
           'theme_location' => 'primary',
