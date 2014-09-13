@@ -12,10 +12,6 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
-// Remove the annoying:
-// <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-add_filter( 'show_recent_comments_widget_style', '__return_false' );
-
 // Add Post Thumbnails Support
 add_theme_support('post-thumbnails');
 
@@ -61,9 +57,6 @@ function theme_enqueues()
   wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
   wp_enqueue_style('bootstrap');
 
-  wp_register_style('jasny-bootstrap', '//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css');
-  wp_enqueue_style('jasny-bootstrap');
-  
   wp_register_style('style', get_template_directory_uri() . '/style.css');
   wp_enqueue_style('style');
 
@@ -82,9 +75,6 @@ function theme_enqueues()
 
   wp_register_script('bootstrapjs', '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js', '', '', true );
   wp_enqueue_script('bootstrapjs');
-
-  wp_register_script('jasny-bootstrapjs', get_template_directory_uri() . '/jasny-bootstrap.min.js', '', '', true );
-  wp_enqueue_script('jasny-bootstrapjs');
 
   if (is_singular() && comments_open() && get_option('thread_comments')) {
   wp_enqueue_script('comment-reply');
