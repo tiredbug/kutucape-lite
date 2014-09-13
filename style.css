@@ -164,6 +164,7 @@ ol.commentlist li ul {
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
+    margin-right: 15px;
     width: 50%; /* 6 columns */
   }
 }
