@@ -24,6 +24,7 @@
           <?php the_content( __( '&hellip; Continue reading <i class="glyphicon glyphicon-arrow-right"></i>', 'theme' ) ); ?>
           <hr/>
         </article>
+        <?php comments_template(); ?>
         <?php endwhile; ?>
         <ul class="pagination">
           <li class="older"><?php next_posts_link('&laquo; Older') ?></li>
