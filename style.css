@@ -8,3 +8,112 @@ Version: 1.0
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 */
+
+/*
+Max content widths
+*/
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail,
+.wp-post-image {
+  max-width: 100%;
+  height: auto;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+/*
+Header
+*/
+.site-title a {
+  display: inline-block;
+  margin: 40px 0 0 0;
+  font-size: 58px;
+}
+.site-title a:hover {
+  text-decoration: none;
+}
+
+/*
+Sidebar
+*/
+.sidebar {
+  padding-top: 10px;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+.sidebar li {
+  margin: 10px 0;
+}
+
+/*
+Footer
+*/
+.footer {
+  margin: 0;
+  padding: 20px 0 40px 0;
+}
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+.footer li {
+  margin: 20px 0;
+}
+
+/*
+Commentlist
+*/
+ol.commentlist {
+  counter-reset: li; 
+  padding: 0;
+}
+ol.commentlist ul {
+  padding: 0;
+}
+ol.commentlist > li {
+  position: relative;
+  margin: 0 0 20px 0;
+  list-style: none;
+}
+ol.commentlist li ol,
+ol.commentlist li ul {
+  list-style-type: none;
+  margin: 0;
+}
+.commentlist li li {
+  background: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 4px;
+}
+.commentlist li li li {
+  background: #fff;
+}
+.commentlist li li li li {
+  background: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 4px;
+}
+.commentlist li li li li li li {
+  background: #fff;
+}
+.commentlist li {
+  padding: 20px;
+}
+.commentlist ul li {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.reply p {
+  margin: 0;
+}
