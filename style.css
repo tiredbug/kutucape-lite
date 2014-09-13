@@ -9,6 +9,11 @@ License: MIT License
 License URI: http://opensource.org/licenses/MIT
 */
 
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
 /*
 Max content widths
 */
