@@ -33,8 +33,6 @@
         $args = array(
           'theme_location' => 'primary',
           'depth' => 0,
-          'container'	=> false,
-          'fallback_cb' => false,
           'menu_class' => 'nav navbar-nav',
           'walker' => new Bootstrap_Walker_Nav_Menu()
         );
