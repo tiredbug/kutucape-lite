@@ -9,7 +9,6 @@
     </div>
   </div>
 
-
 <?php wp_footer(); ?>
 
  <!-- addClass to reply button and data-toogle dropdown for Walker Nav Menu -->
@@ -18,9 +17,6 @@
   $j(document).ready(function(){
     $j(".comment-reply-link").addClass("btn btn-default");
     $j('.dropdown > a').attr("data-toggle", "dropdown");
-    $j('[data-toggle="offcanvas"]').click(function () {
-      $j('.row-offcanvas').toggleClass('active')
-    });
   });
   
 </script>
