@@ -12,6 +12,10 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
+// Remove the annoying:
+// <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+add_filter( 'show_recent_comments_widget_style', '__return_false' );
+
 // Add Post Thumbnails Support
 add_theme_support('post-thumbnails');
 
