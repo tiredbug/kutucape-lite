@@ -37,7 +37,6 @@
     select.change(function(){
       var theme = themes[$j(this).val()];
       $j("link").attr("href", theme.css);
-      $j("h1").text(theme.name);
     }).change();
 
   }, "json").fail(function(){
