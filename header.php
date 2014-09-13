@@ -58,4 +58,3 @@
   <hr/>
 </div>
 <!-- End Header -->
-<?php endif; ?>
