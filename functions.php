@@ -38,11 +38,23 @@ function theme_search_form( $form ) {
     <form class="form-inline" role="search" method="get" id="searchform" action="' . home_url('/') . '" >
       <div class="input-group">
         <input class="form-control" type="text" value="' . get_search_query() . '" name="s" id="s" />
-        <span type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" class="input-group-addon"><i class="glyphicon glyphicon-search"></i> '. esc_attr__('Search') .'</span>
+        <span class="input-group-btn">
+          <button type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" class="btn btn-default"><i class="glyphicon glyphicon-search"></i> '. esc_attr__('Search') .'</button>
+        </span>
       </div>
     </form>';
     return $form;
 }
+
+
+
+  <div class="input-group">
+    <input type="search" value="<?php echo get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e('Search', 'roots'); ?> <?php bloginfo('name'); ?>">
+    <span class="input-group-btn">
+      <button type="submit" class="search-submit btn btn-default"><?php _e('Search', 'roots'); ?></button>
+    </span>
+  </div>
+  
 add_filter( 'get_search_form', 'theme_search_form' );
 
 // Add favicon 
