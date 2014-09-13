@@ -45,16 +45,6 @@ function theme_search_form( $form ) {
     </form>';
     return $form;
 }
-
-
-
-  <div class="input-group">
-    <input type="search" value="<?php echo get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e('Search', 'roots'); ?> <?php bloginfo('name'); ?>">
-    <span class="input-group-btn">
-      <button type="submit" class="search-submit btn btn-default"><?php _e('Search', 'roots'); ?></button>
-    </span>
-  </div>
-  
 add_filter( 'get_search_form', 'theme_search_form' );
 
 // Add favicon 
