@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>. <select></select></p>
+          <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>.</p>
         </div>
       </div>
     </div>
@@ -21,6 +21,7 @@
       $j('.row-offcanvas').toggleClass('active')
     });
   });
+</script>
 
 </body>
 </html>
