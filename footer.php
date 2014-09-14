@@ -1,5 +1,5 @@
-        <hr/>
         <div class="footer col-lg-12">
+        <hr/>
           <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>.</p>
         </div>
 
