@@ -1,4 +1,4 @@
-        <div class="footer">
+        <div class="footer col-lg-12">
           <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>.</p>
         </div>
 
