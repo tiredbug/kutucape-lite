@@ -63,6 +63,12 @@ function theme_enqueues()
   wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
   wp_enqueue_style('bootstrap');
 
+  wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+  wp_enqueue_style('font-awesome');
+    
+  wp_register_style('bootswatch_style', get_theme_mod('bootswatch_style'));
+  wp_enqueue_style('bootswatch_style');
+  
   wp_register_style('style', get_template_directory_uri() . '/style.css');
   wp_enqueue_style('style');
 
@@ -113,5 +119,73 @@ function nav_class_filter( $var ) {
 }
 add_filter('nav_menu_css_class', 'nav_class_filter', 100, 1);
 add_filter('nav_menu_item_id', '__return_null');
+
+// Bootswatch Costumizer
+function bootswatch_register_theme_customizer( $wp_customize ){
+  $styles = array(
+    'Amelia' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/amelia/bootstrap.min.css',
+    'Cerulean' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cerulean/bootstrap.min.css',
+    'Cosmo' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css',
+    'Cyborg' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cyborg/bootstrap.min.css',
+    'Default' => '',
+    'Flaty' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css',
+    'Journal' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/journal/bootstrap.min.css',
+    'Readable' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css',
+    'Simplex' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/simplex/bootstrap.min.css',
+    'Slate' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/slate/bootstrap.min.css',
+    'Spacelab' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/spacelab/bootstrap.min.css',
+    'United' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css',
+    'Yeti' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css'
+  );
+  $labels = array_flip( $styles );
+  $wp_customize->add_section(
+    'bootswatch_themes',
+    array(
+      'title'     => 'BootSwatch Themes',
+      'priority'  => 200
+    )
+  );
+  $wp_customize->add_setting(
+    'bootswatch_style',
+      array(
+        'default'     => '',
+        #'transport'   => 'postMessage'
+      )
+  );
+  $wp_customize->add_control(
+    'bootswatch_style',
+    array(
+      'section'		=> 'bootswatch_themes',
+      'label'		=> __( 'Bootswatch Theme', 'theme' ),
+      'type'		=> 'select',
+      'choices'		=> $labels,
+      'settings'	=> 'bootswatch_style'
+    )
+  );
+}
+add_action( 'customize_register', 'bootswatch_register_theme_customizer' );
+
+function navbar_customizer( $wp_customize ) {
+
+	// add "Navbar Options" section
+	$wp_customize->add_section( 'navbar_options_section' , array(
+		'title'      => __( 'Navbar Options', 'theme' ),
+		'priority'   => 190,
+	) );
+	
+	// add setting for toggle checkbox
+	$wp_customize->add_setting( 'navbar_toggle', array( 
+		'default' => 1 
+	) );
+	
+	// add control for toggle checkbox
+	$wp_customize->add_control( 'navbar_toggle', array(
+		'label'     => __( 'Inverse Navbar', 'theme' ),
+		'section'   => 'navbar_options_section',
+		'priority'  => 10,
+		'type'      => 'checkbox'
+	) );
+}
+add_action( 'customize_register', 'navbar_customizer' );
 
 ?>
