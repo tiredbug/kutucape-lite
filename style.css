@@ -61,7 +61,7 @@ Sidebar
   padding: 0;
 }
 .sidebar li {
-  margin: 10px 3px;
+  margin: 10px 5px;
 }
 .sidebar li:before {
   font-family: FontAwesome;
