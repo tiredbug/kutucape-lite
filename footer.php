@@ -1,8 +1,8 @@
-        <div class="footer text-center col-xs-12">
-          <hr/>
-          <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>.</p>
-        </div>
-
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 footer">
+      <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>.</p>
+    </div>
   </div><!-- .row -->
 </div><!-- .container -->
 
