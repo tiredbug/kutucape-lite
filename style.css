@@ -64,8 +64,11 @@ Sidebar
   margin: 10px 0;
 }
 .sidebar li:before {
-  content: "Test";
-  margin: 10px 0;
+  font-family: FontAwesome;
+  content: "\f105";
+  display: inline-block;
+  padding-right: 5px;
+  vertical-align: middle;
 }
 
 /*
