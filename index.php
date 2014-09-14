@@ -39,5 +39,8 @@
     <div class="col-xs-6 col-sm-4 sidebar-offcanvas sidebar" id="sidebar" role="navigation">
         <?php get_sidebar(); ?>
     </div><!-- /.col-sm-4 .sidebar -->
-    
+
+  </div><!-- .row -->
+</div><!-- .container -->
+
 <?php get_footer(); ?>
