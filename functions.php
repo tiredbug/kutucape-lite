@@ -255,24 +255,24 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 // Bootswatch Costumizer
 function bootswatch_register_theme_customizer( $wp_customize ){
   $styles = array(
-    'Amelia' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/amelia/bootstrap.min.css',
-    'Cerulean' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cerulean/bootstrap.min.css',
-    'Cosmo' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css',
-    'Cyborg' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cyborg/bootstrap.min.css',
-    'Darkly' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/darkly/bootstrap.min.css',
+    'Amelia' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/amelia/bootstrap.min.css',
+    'Cerulean' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/cerulean/bootstrap.min.css',
+    'Cosmo' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css',
+    'Cyborg' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/cyborg/bootstrap.min.css',
+    'Darkly' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/darkly/bootstrap.min.css',
     'Default' => '',
-    'Flaty' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css',
-    'Journal' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/journal/bootstrap.min.css',
-    'Lumen' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/lumen/bootstrap.min.css',
-    'Paper' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/paper/bootstrap.min.css',
-    'Readable' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css',
-    'Sandstone' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/sandstone/bootstrap.min.css',
-    'Simplex' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/simplex/bootstrap.min.css',
-    'Slate' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/slate/bootstrap.min.css',
-    'Spacelab' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/spacelab/bootstrap.min.css',
-    'Superhero' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css',
-    'United' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css',
-    'Yeti' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css'
+    'Flaty' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/flatly/bootstrap.min.css',
+    'Journal' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/journal/bootstrap.min.css',
+    'Lumen' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/lumen/bootstrap.min.css',
+    'Paper' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/paper/bootstrap.min.css',
+    'Readable' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/readable/bootstrap.min.css',
+    'Sandstone' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css',
+    'Simplex' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/simplex/bootstrap.min.css',
+    'Slate' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/slate/bootstrap.min.css',
+    'Spacelab' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/spacelab/bootstrap.min.css',
+    'Superhero' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css',
+    'United' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/united/bootstrap.min.css',
+    'Yeti' => '//netdna.bootstrapcdn.com/bootswatch/3.2.0/yeti/bootstrap.min.css'
   );
   $labels = array_flip( $styles );
   $wp_customize->add_section(
