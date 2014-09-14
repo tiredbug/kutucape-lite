@@ -259,13 +259,18 @@ function bootswatch_register_theme_customizer( $wp_customize ){
     'Cerulean' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cerulean/bootstrap.min.css',
     'Cosmo' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css',
     'Cyborg' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/cyborg/bootstrap.min.css',
+    'Darkly' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/darkly/bootstrap.min.css',
     'Default' => '',
     'Flaty' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css',
     'Journal' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/journal/bootstrap.min.css',
+    'Lumen' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/lumen/bootstrap.min.css',
+    'Paper' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/paper/bootstrap.min.css',
     'Readable' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css',
+    'Sandstone' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/sandstone/bootstrap.min.css',
     'Simplex' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/simplex/bootstrap.min.css',
     'Slate' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/slate/bootstrap.min.css',
     'Spacelab' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/spacelab/bootstrap.min.css',
+    'Superhero' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css',
     'United' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css',
     'Yeti' => '//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css'
   );
