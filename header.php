@@ -43,6 +43,7 @@
 </nav>
 <!-- End Navbar -->
 
+<?php if ( !is_page('frontpage') ) : ?>
 <!-- Header -->
 <div class="container">
   <div class="row">
@@ -56,3 +57,4 @@
   <hr/>
 </div>
 <!-- End Header -->
+<?php endif; ?>
