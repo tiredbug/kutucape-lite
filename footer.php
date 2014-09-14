@@ -14,7 +14,6 @@
   $j=jQuery.noConflict();
   $j(document).ready(function(){
     $j(".comment-reply-link").addClass("btn btn-default");
-    $j('.dropdown > a').attr("data-toggle", "dropdown");
     $j('[data-toggle="offcanvas"]').click(function () {
       $j('.row-offcanvas').toggleClass('active')
     });
