@@ -63,6 +63,10 @@ Sidebar
 .sidebar li {
   margin: 10px 0;
 }
+.sidebar li:before {
+  content: "Test";
+  margin: 10px 0;
+}
 
 /*
 Footer
