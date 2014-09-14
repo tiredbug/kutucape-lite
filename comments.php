@@ -106,7 +106,7 @@ if (have_comments()) : ?>
     </p>
     <?php else : ?>
     <div class="form-group">
-      <label for="author"><?php _e('Your name', 'theme'); if ($req) _e(' <span class="text-muted">(required)</span>', 'theme'); ?></label>
+      <label for="author"><?php _e('Your name'); if ($req) _e(' <span class="text-muted">(required)</span>', 'theme'); ?></label>
       <input type="text" class="form-control" name="author" id="author" placeholder="Your name" value="<?php echo esc_attr($comment_author); ?>" <?php if ($req) echo 'aria-required="true"'; ?>>
     </div>
     <div class="form-group">
