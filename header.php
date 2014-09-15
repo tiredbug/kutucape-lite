@@ -51,7 +51,7 @@
 </nav>
 <!-- End Navbar -->
 
-<?php if ( !is_page('frontpage') ) : ?>
+<?php if ( !is_page_template('page-canvas.php') ) : ?>
 <!-- Header -->
 <div class="container">
   <div class="row">
