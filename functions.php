@@ -94,25 +94,6 @@ function theme_enqueues()
 }
 add_action('wp_enqueue_scripts', 'theme_enqueues', 100);
 
-// Simple WordPress Walker Nav Menu extends for Bootstrap 
-class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
-  function display_element($element, &$children_elements, $max_depth, $depth=0, $args, &$output) {
-    $id_field = $this->db_fields['id'];
-    if(!empty($children_elements[$element->$id_field])) {
-      $element->classes[] = 'dropdown';
-        $element->title .= ' <b class="caret"></b>';
-    }
-      Walker_Nav_Menu::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
-  }
-  function start_lvl( &$output, $depth = 0, $args = array() ) {
-    $classes = array( 'sub-menu dropdown-menu' );
-    $class_names = implode( ' ', $classes );
-    // build html
-    $indent = str_repeat( "\t", $depth );
-    $output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
-  }    
-}
-
 // Reduce nav classes, leaving only 'dropdown'
 function nav_class_filter( $var ) {
   return is_array($var) ? array_intersect($var, array('dropdown')) : '';

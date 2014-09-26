@@ -1,7 +1,7 @@
 <hr/>
 <div class="container">
   <div class="row">
-    <div class="col-lg-12 footer">
+    <div class="col-sm-12 footer text-center">
       <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>.</p>
     </div>
   </div><!-- .row -->
@@ -9,7 +9,6 @@
 
 <?php wp_footer(); ?>
 
- <!-- addClass to reply button and data-toogle dropdown for Walker Nav Menu -->
 <script type="text/javascript">
   $j=jQuery.noConflict();
   $j(document).ready(function(){
