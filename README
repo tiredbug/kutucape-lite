@@ -1,0 +1,20 @@
+Kutu Cape Lite - A Bootstrap 3 Starter Theme, for WordPress
+
+A (very) simple WordPress starter theme loaded with Bootstrap 3.
+
+Version 1.3
+
+##Features
+
+* Simple, intuitive, clean code.
+* CSS, JS, functions and template parts in different folders.
+* Bootstrap 3.2.0 - CSS and JS enqueued.
+* Bootswatch style option.
+* jQuery 1.11.1 called from Google CDN.
+* Modernizr.js, respond.js and html5shiv.css included - enqueued.
+* Clean-up scripts - e.g. removing WordPress-specific stiff grom the <head>. (Do not rely on these for security.)
+* Custom comment list callback.
+* Canvas (full-width) page template - select it in the WordPress Page Editor **Page Attributes** panel.
+* [MIT licence](http://opensource.org/licenses/MIT) (open source).
+
+This theme has been built for use as a starter theme and as a learning aid for people who wish to get into WordPress theme design.
