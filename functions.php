@@ -89,7 +89,7 @@ function theme_enqueues()
   wp_register_style('bootswatch_style', get_theme_mod('bootswatch_style'));
   wp_enqueue_style('bootswatch_style');
   
-  wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+  wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
   wp_enqueue_style('font-awesome');
     
   wp_register_style('style', get_template_directory_uri() . '/style.css');
