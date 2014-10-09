@@ -69,7 +69,7 @@ function theme_search_form( $form ) {
       <div class="input-group">
         <input class="form-control" type="text" value="' . get_search_query() . '" name="s" id="s" />
         <span class="input-group-btn">
-          <button type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i> '. esc_attr__('Search') .'</button>
+          <button type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i> '. esc_attr__('Go') .'</button>
         </span>
       </div>
     </form>';
