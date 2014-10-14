@@ -9,6 +9,7 @@
 </div><!-- .container -->
 
 <?php wp_footer(); ?>
+<script type="text/javascript" src="http://www.tiredbug.com/styleswitcher.jquery.js"></script>
 
 <script type="text/javascript">
   $j=jQuery.noConflict();
@@ -17,6 +18,8 @@
     $j('[data-toggle="offcanvas"]').click(function () {
       $j('.row-offcanvas').toggleClass('active')
     });
+    $j('.dropdown > a').attr("data-toggle", "dropdown");
+    $j(".current-menu-item").addClass("active");
   });
 </script>
 
