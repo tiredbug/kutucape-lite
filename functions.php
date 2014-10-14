@@ -90,10 +90,6 @@ function theme_enqueues()
   wp_register_style('bootswatch_style', get_theme_mod('bootswatch_style'));
   wp_enqueue_style('bootswatch_style');
 
-  if(!empty($_COOKIE['style'])) $style = $_COOKIE['style'] ; else $style = 'default';
-  wp_register_style('style-cookie', '//netdna.bootstrapcdn.com/bootswatch/3.2.0/' . esc_attr( $style ) . '/bootstrap.min.css');
-  wp_enqueue_style('style-cookie');
-
   wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
   wp_enqueue_style('font-awesome');
     
