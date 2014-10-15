@@ -139,7 +139,7 @@ class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 // Reduce nav classes, leaving only 'dropdown'
 function nav_class_filter( $var ) {
-  return is_array($var) ? array_intersect($var, array('current-menu-item', 'dropdown')) : '';
+  return is_array($var) ? array_intersect($var, array('dropdown')) : '';
 }
 add_filter('nav_menu_css_class', 'nav_class_filter', 100, 1);
 add_filter('nav_menu_item_id', '__return_null');
