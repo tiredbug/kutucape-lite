@@ -1,0 +1,87 @@
+<div class="jumbotron text-center">
+<div class="container">
+<div class="row">
+
+<h1>Kutu Cape Lite</h1>
+<h1><small>Simple, Intuitive, Clean</small></h1>
+A (very) simple <a href="http://wordpress.org">WordPress</a> starter theme loaded with <a href="http://getbootstrap.com">Twitter Bootstrap 3</a> and <a href="http://fontawesome.io">Font Awesome</a>.
+
+<br/>
+
+<a href="https://github.com/tiredbug/kutucape-lite/archive/master.zip" class="btn btn-primary btn-lg" role="button"><i class="fa fa-download"></i>&nbsp; Download From Github</a>
+
+</div>
+</div>
+</div>
+
+<section id="features">
+<div class="container text-center">
+<div class="row">
+<div class="col-md-12">
+<h1>Kutu Cape Features</h1>
+<p class="lead"><strong>Why should you use it?</strong></p>
+<p class="lead">We recently started rebuilding theme</a> and needed to add some custom controls. <strong>Kutu Cape</strong> is the result of these efforts. If you want to see a demo of Kutu Cape, this website is use Kutu Cape Lite theme.</p>
+<br/>
+
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+
+<i class="fa fa-rocket fa-4x"></i>
+
+<h2>Ready to use</h2>
+<p>Clone from github or install in your WordPress and start using it immediately! If you can use the standard WordPress customizer then you'll be able to use in no time!</p>
+
+<br/>
+
+</div>
+<div class="col-sm-6">
+
+<i class="fa fa-dashboard fa-4x"></i>
+
+<h2>Custom Controls</h2>
+<p>We've extended the standard WordPress Customizer by adding extra fields and options, making it easier to configure theme with minimal coding.</p>
+
+<br/>
+
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+
+<i class="fa fa-eye fa-4x"></i>
+
+<h2>Live Updating</h2>
+<p>Unlike most theme with option frameworks, we don't add any admin pages. Instead, you will be able to change theme with <a href="http://bootswatch.com/">Bootswatch</a> style and update live.</p>
+
+<br/>
+
+</div>
+<div class="col-sm-6">
+
+<i class="fa fa-code fa-4x"></i>
+
+<h2>Developer-Friendly</h2>
+<p>Developers can build and extend the <strong>Kutu Cape</strong> theme with their own options. We're open-source, so you can contribute your modifications to our <a href="https://github.com/tiredbug/kutucape-lite/">github repository</a>.</p>
+
+<br/>
+
+</div>
+</div>
+</div>
+</section>
+
+<hr/>
+
+<section id="download">
+<div class="container text-center">
+<div class="row">
+<div class="col-md-12">
+<h1>Are you ready?</h1>
+<a class="btn btn-default btn-lg" href="https://github.com/tiredbug/kutucape-lite/archive/master.zip"><i class="fa fa-download icon"></i>&nbsp; Download Kutu Kutu Now</a>
+</div>
+</div>
+</div>
+</section>
+
