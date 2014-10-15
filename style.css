@@ -172,3 +172,5 @@ ol.commentlist li ul {
     margin-right: 15px; 
   }
 }
+
+#features, #download { padding-top: 50px; padding-bottom: 50px; }
