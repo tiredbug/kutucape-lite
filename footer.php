@@ -19,7 +19,6 @@
       $j('.row-offcanvas').toggleClass('active')
     });
     $j('.dropdown > a').attr("data-toggle", "dropdown");
-    $j(".current-menu-item").addClass("active");
   });
 </script>
 
