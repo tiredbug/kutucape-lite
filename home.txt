@@ -2,7 +2,7 @@
 <div class="container">
 <div class="row">
 
-<h1>Kutu Cape Lite</h1>
+<h1>Kutu Cape</h1>
 <h1><small>Simple, Intuitive, Clean</small></h1>
 A (very) simple <a href="http://wordpress.org">WordPress</a> starter theme loaded with <a href="http://getbootstrap.com">Twitter Bootstrap 3</a> and <a href="http://fontawesome.io">Font Awesome</a>.
 
