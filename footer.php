@@ -9,7 +9,6 @@
 </div><!-- .container -->
 
 <?php wp_footer(); ?>
-<script type="text/javascript" src="http://www.tiredbug.com/styleswitcher.jquery.js"></script>
 
 <script type="text/javascript">
   $j=jQuery.noConflict();
