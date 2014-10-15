@@ -6,7 +6,7 @@ if (isset($_GET['activated']) && is_admin()){
 }
 function theme_setup_init(){
   if(get_option('page_on_front')=='0' && get_option('show_on_front')=='posts'){
-    $content = file_get_contents('' .get_template_directory_uri() . '/home.txt');
+    $content = file_get_contents('' . get_template_directory_uri() . '/home.txt');
     // Create frontpage
     $frontpage = array(
       'post_type'    => 'page',
