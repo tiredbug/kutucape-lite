@@ -93,11 +93,17 @@ if (have_comments()) : ?>
 
 <?php if (comments_open()) : ?>
 <section id="respond">
+  <?php $jetpack_active_modules = get_option('jetpack_active_modules');
+    if ( class_exists( 'Jetpack', false ) && $jetpack_active_modules && in_array( 'comments', $jetpack_active_modules ) ) {
+      comment_form();
+    } else {
+  ?>
   <h3><?php comment_form_title(__('Your feedback', 'theme'), __('Responses to %s', 'theme')); ?></h3>
   <p><?php cancel_comment_reply_link(); ?></p>
   <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
   <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'theme'), wp_login_url(get_permalink())); ?></p>
   <?php else : ?>
+
   <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
     <?php if (is_user_logged_in()) : ?>
     <p>
@@ -127,6 +133,7 @@ if (have_comments()) : ?>
     <?php do_action('comment_form', $post->ID); ?>
   </form>
   <?php endif; ?>
+  <?php } ?>
 </section>
 <?php endif; 
 // End Function Comment Form
